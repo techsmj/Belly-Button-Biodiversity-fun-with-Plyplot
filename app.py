@@ -10,7 +10,17 @@ from sqlalchemy import create_engine
 
 from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
+print(os.environ)
 
+if not os.environ.get("DYNO"):
+    import config
+    print(config.name)
+
+
+if os.environ.get("JAWSDB_URL"):
+    dburl = os.environ["JAWSDB_URL"]
+else:
+    dburl = "sqlite://"
 app = Flask(__name__)
 
 
