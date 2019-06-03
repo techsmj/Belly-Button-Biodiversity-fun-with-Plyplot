@@ -27,7 +27,9 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-
+# engine = sqlalchemy.create_engine(dburl)
+# df= pd.read_sql("SELECT * FROM belly_button_metadata", engine)
+# print(df)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db/bellybutton.sqlite"
 db = SQLAlchemy(app)
 
