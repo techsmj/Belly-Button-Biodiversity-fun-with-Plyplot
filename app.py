@@ -10,11 +10,11 @@ from sqlalchemy import create_engine
 
 from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
-print(os.environ)
+# print(os.environ)
 
-if not os.environ.get("DYNO"):
-    import config
-    print(config.name)
+# if not os.environ.get("DYNO"):
+#     import config
+#     print(config.name)
 
 
 if os.environ.get("JAWSDB_URL"):
@@ -56,8 +56,9 @@ def names():
     """Return a list of sample names."""
 
     # Use Pandas to perform the sql query
-    stmt = db.ion.sessquery(Samples).statement
+   stmt = db.session.query(Samples).statement
     df = pd.read_sql_query(stmt, db.session.bind)
+
 
     # Return a list of the column names (sample names)
     return jsonify(list(df.columns)[2:])
