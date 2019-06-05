@@ -24,7 +24,7 @@ function buildMetadata(sample) {
       // BONUS: Build the Gauge Chart
       // buildGauge(data.WFREQ);
   }
-  buildPlot();
+
 
   function buildCharts(sample) {
   
@@ -48,15 +48,15 @@ function buildMetadata(sample) {
 
       var data = [trace];
 
-    var layout = {
-     title: "'Pie' Chart",
+      var layout = {
+      title: "'Pie' Chart",
 };
 
 Plotly.newPlot("pie", data, layout);
 
 
   }
-  buildMetadata();
+
   
   function init() {
     // Grab a reference to the dropdown select element
