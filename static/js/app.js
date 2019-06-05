@@ -6,7 +6,7 @@ function buildMetadata(sample) {
     var url = `metadata/${sample}`;
     d3.json(url).then(function(response) {
         console.log(response);
-    });
+    
 
 
       // Use d3 to select the panel with id of `#sample-metadata`
@@ -23,6 +23,7 @@ function buildMetadata(sample) {
   
       // BONUS: Build the Gauge Chart
       buildGauge(data.WFREQ);
+    });
   }
 
 
