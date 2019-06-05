@@ -33,7 +33,7 @@ function buildMetadata(sample) {
     var url = `/samples/${sample}`;
     d3.json(url).then(function(data) {
         console.log(data);
-    });
+    
       // @TODO: Build a Bubble Chart using the sample data
       var trace = 
       {
@@ -71,7 +71,7 @@ function buildMetadata(sample) {
 
 Plotly.newPlot("pie", data, layout);
 
-
+    });
   }
 
   
