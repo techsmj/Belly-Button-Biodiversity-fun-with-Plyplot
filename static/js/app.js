@@ -3,7 +3,7 @@ function buildMetadata(sample) {
     // @TODO: Complete the following function that builds the metadata panel
   
     // Use `d3.json` to fetch the metadata for a sample
-    var url = "/metadata/sample";
+    var url = "metadata/sample";
     d3.json(url).then(function(response) {
         console.log(response);
     });
@@ -29,7 +29,7 @@ function buildMetadata(sample) {
   function buildCharts(sample) {
   
     // @TODO: Use `d3.json` to fetch the sample data for the plots
-    var url1 = "/samples/sample";
+    var url1 = "samples/sample";
     d3.json(url).then(function(data) {
         console.log(data);
     });
