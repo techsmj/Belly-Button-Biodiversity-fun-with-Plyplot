@@ -19,10 +19,10 @@ function buildMetadata(sample) {
       Object.entries(response).forEach(([key, value]) => {
         metadata.append("h6").text(`${key}: ${value}`);
       });
-      var url = `metadata/${sample}`;
+      
   
       // BONUS: Build the Gauge Chart
-      // buildGauge(data.WFREQ);
+      buildGauge(data.WFREQ);
   }
 
 
